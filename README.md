@@ -252,14 +252,12 @@ pod setup
 3. Adobe DX
 
 ## Other
-1.Chrome
-同步账号信息
-
-2.WeiXin
-3.QQ
-4.Sip
-5.网易云音乐
-6.Foxmail
+1. Chrome
+2. WeiXin
+3. QQ
+4. Sip
+5. 网易云音乐
+6. Foxmail
 
 ## Company
 1. RTX
