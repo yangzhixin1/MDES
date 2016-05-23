@@ -2,7 +2,7 @@
 
 每当开发环境出现无法修复的场景时，大部分开发者都会对重做操作系统望而生畏，无非是因为很多开发配置参数和IDE配置需要重新安装和设置，浪费青春和生命.
 
-MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的开发环境的搭建过程，并且这里是按照安装先后顺序进行编写的.
+MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的开发环境的搭建过程，并且这里是按照安装 **先后顺序** 进行编写的.
 
 ## Lantern
 作为一个开发者，尤其是他妈的中国开发者（对不起这里爆粗口了），如果不能够访问谷歌等同于缺少了一个解决问题的利器，所以要做的第一步就是要搞科学上网，安装配置最简单的工具就是 [lantern](https://github.com/getlantern/lantern).
@@ -70,7 +70,7 @@ Homebrew 就不用多介绍了， OSX 上必备的程序包安装工具，安装
 
 ## Pyenv
 
-碰到脚本语言，就势必出现大家在开发的时候选择不同版本进行开发，这个时候应该选择就出现了各种 Version Manager，像 Python 这种一直维持两个版本的语言来说，更需要用这种工具来随时切换各种 Python 脚本，所以就需要[pyenv](https://github.com/yyuu/pyenv)来管理.
+碰到脚本语言，就势必出现大家在开发的时候选择不同版本进行开发，这个时候就出现了各种 Version Manager，像 Python 这种一直维持两个版本的语言来说，更需要用这种工具来随时切换各种 Python 脚本，所以就需要[pyenv](https://github.com/yyuu/pyenv)来管理.
 
 安装方法如下：
 
@@ -233,7 +233,24 @@ sudo gem install cocoapods
 pod setup
 ```
 
-## Xamarin
+## JAVA
+
+[JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
+安装好了JDK方面安装 Android 的开发环境以及安装 InteliJ 系列的IDE.
+
+## IDE
+
+上面安装了两个IDE： `Xcode` 和 `Atom`，下面的列出一个比较常用的列表仅供参考：
+
+- [AndroidStudio](https://developer.android.com/studio/index.html)
+- [Xamarin](https://www.xamarin.com/download)
+- [InteliJ IDEA]()
+- [WebStorm]()
+- [AppCode]()
+- [PHPStorm]()
+
+## Genymotion
 
 ## VersionControl
 1. SourceTree
@@ -241,8 +258,6 @@ pod setup
 3. CornerStone
 
 ## Swift
-
-## Android
 
 ## react-native
 
@@ -258,10 +273,11 @@ pod setup
 4. Sip
 5. 网易云音乐
 6. Foxmail
+7. iStatMenus
+8. CleanMyMac
 
 ## Company
 1. RTX
-
 
 ## TODO
 - [x] make the MDES document
