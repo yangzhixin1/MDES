@@ -263,3 +263,10 @@ pod setup
 
 ## Company
 1. RTX
+
+
+## TODO
+- [x] make the MDES document
+- [ ] use shell to install the MDES
+- [ ] use swift to install the MDES
+- [ ] collect from community
