@@ -85,15 +85,17 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
 [Shadowsocks](shadowsocks.com) 也是非常好的科学上网软件，Github 地址为：https://github.com/shadowsocks/shadowsocks.
 
-为什么要在这里才介绍这个软件不跟上面的 Lantern、GreenVPN 一起介绍? 这里是因为 Shadowsocks 更像是一个可以编程的玩具，可以随便配置，需要安装跟中脚本来支持它运行，所以上面的脚本安装的差不多了，我们到这里才能够介绍Shadowsocks
+为什么要在这里才介绍这个软件不跟上面的 Lantern、GreenVPN 一起介绍? 这里是因为 Shadowsocks 更像是一个可以编程的玩具，可以随便配置，需要安装跟中脚本来支持它运行，所以上面的脚本安装的差不多了，我们到这里才能够介绍Shadowsocks.
 
-安装完 Shadowsocks 后配置共用服务器如下：
+[搬瓦工自己搭建 Shadowsocks 服务器](http://blog.csdn.net/wwj_748/article/details/50636127)
+
+安装完 Shadowsocks 后配置上面设置的共用服务，如下：
 
 ```
-ip : 23.105.204.203
-port: 1234
-password: 123.gome
-备注：meixin_shadowsocks
+ip : xxx.xxx.xxx.xxx
+port: xxx
+password: xxxx
+备注：xxxx
 ```
 
 ### GFWList
