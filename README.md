@@ -219,7 +219,8 @@ nvm alias default v4.4.4
 - nuclient project manager
 
 **themes**
-  Nucleus Dark UI
+
+- Nucleus Dark UI
 
 ## Cocoapods
 
