@@ -265,3 +265,4 @@ pod setup
 ## TODO
 - [x] make the MDES document
 - [ ] use shell to install the MDES
+- [ ] collect from community
