@@ -89,7 +89,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
 [搬瓦工自己搭建 Shadowsocks 服务器](http://blog.csdn.net/wwj_748/article/details/50636127)
 
-安装完 Shadowsocks 后配置上面设置的共用服务，如下：
+安装完 Shadowsocks 后配置上面设置的共用服务，如下： 
 
 ```
 ip : xxx.xxx.xxx.xxx
