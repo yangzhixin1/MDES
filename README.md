@@ -275,6 +275,7 @@ pod setup
 6. Foxmail
 7. iStatMenus
 8. CleanMyMac
+9. Mindnode
 
 ## Company
 1. RTX
