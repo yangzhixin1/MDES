@@ -218,7 +218,8 @@ nvm alias default v4.4.4
 - git-time-machine
 - pigments
 - project-manager
-- nuclient project manager
+- nuclide
+- project manager
 
 **themes**
 
@@ -232,6 +233,8 @@ gem sources -l
 sudo gem install cocoapods
 pod setup
 ```
+
+随着 1.0.0 版本的发布，可以根据自己的喜好来安装 Cocoapods App.
 
 ## JAVA
 
