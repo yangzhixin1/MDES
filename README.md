@@ -236,6 +236,43 @@ pod setup
 
 随着 1.0.0 版本的发布，可以根据自己的喜好来安装 Cocoapods App.
 
+## Private Pod Library
+
+- [ ] [CocoaPod-介绍](todo)
+- [ ] [CocoaPod-使用指南](todo)
+- [ ] [CocoaPod-常见私有仓库](todo)
+- [ ] [CocoaPod-创建公共依赖库病发布](todo)
+
+## Git SSH Key
+
+```
+ssh-keygen -t rsa -b 4096 -C "xxxx@xxx.com" -f ~/.ssh/id_rsa_github
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa_github
+
+
+ssh-keygen -t rsa -b 4096 -C "xxxx@xxx.com" -f ~/.ssh/id_rsa_coding.net
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa_coding.net
+```
+
+生成相应的 SSH key 后，需要在 .ssh 文件夹下生成相应的 config 文件，我一般的配置如下：
+
+```
+# Github CoderAFI (developer_afi@163.com)
+Host github.com
+Hostname github.com
+User CoderAFI
+Identityfile ~/.ssh/id_rsa_github
+
+# Coding.net (developer_afi@163.com)
+Host git.coding.net
+User developer_afi@163.com
+User CoderAFI
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_coding.net
+```
+
 ## JAVA
 
 [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -244,7 +281,7 @@ pod setup
 
 ## IDE
 
-上面安装了两个IDE： `Xcode` 和 `Atom`，下面的列出一个比较常用的列表仅供参考：
+上面安装了两个IDE： `Xcode` 和 `Atom`，下面的列出一个比较常用的列表：
 
 - [AndroidStudio](https://developer.android.com/studio/index.html)
 - [Xamarin](https://www.xamarin.com/download)
