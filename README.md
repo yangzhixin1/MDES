@@ -240,8 +240,21 @@ pod setup
 
 - [ ] [CocoaPod-介绍](todo)
 - [ ] [CocoaPod-使用指南](todo)
-- [ ] [CocoaPod-常见私有仓库](todo)
-- [ ] [CocoaPod-创建公共依赖库病发布](todo)
+- [ ] [CocoaPod-创建私有仓库](todo)
+- [ ] [CocoaPod-创建公共依赖库并发布](todo)
+
+## Carthage
+
+Cocoapods 用累的同学不妨试试这个，`非侵入式`的依赖管理工具，安装方法如下：
+
+```
+brew update
+brew install carthage
+```
+
+- [ ] [Carthage-介绍](todo)
+- [ ] [Carthage-使用指南](todo)
+- [ ] [Carthage-创建公共依赖库并发布](todo)
 
 ## Git SSH Key
 
@@ -284,7 +297,13 @@ IdentityFile ~/.ssh/id_rsa_coding.net
 上面安装了两个IDE： `Xcode` 和 `Atom`，下面的列出一个比较常用的列表：
 
 - [AndroidStudio](https://developer.android.com/studio/index.html)
-- [Xamarin](https://www.xamarin.com/download)
+- [XamarinStudio](https://www.xamarin.com/download)
+
+XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是一个划时代的意义，从这个版本开始意味着微软的技术终于在这么多年之后被开发者搬到了所有平台，这个版本最让我期望的就是 Xamarin Previewer 的功能和 Skin Change，其实在2、3年前我也有这样的想法，可惜我自己没能力实现，不过这么吊的功能怎么安装呢，这里说总结下：
+1. 默认情况下载的 XamarinInstaller 还是安装5 的版本，所以要在打开XamarinStudio之后，点击 `update channel `  切换到 `alpha` 下，然后 Xamarin Studio 就会自动帮你下载 6.1 版本，并下载相应平台的依赖库.
+2. 下载完后，重新启动就可以在设置里修改 Xamarin Studio 的皮肤
+3. 新建工程后，默认还是用的 xamarin.forms 库还是 5 的时候默认的，而且也不会自动升级，这个原因是由于在升级到 Xamarin Studio 6.1 之后, `nuget` 仓库的 `sources` 没有了，这时候你需要去设置里自己设置下，然后重新 `update solution package` 就会下载最新版本的 xamarin.forms，这个时候打开 `xaml` 文件就可以实时预览相应的界面了
+
 - [InteliJ IDEA]()
 - [WebStorm]()
 - [AppCode]()
