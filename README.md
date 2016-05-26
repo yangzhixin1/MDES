@@ -316,6 +316,10 @@ IdentityFile ~/.ssh/id_rsa_coding.net
 7. iStatMenus
 8. CleanMyMac
 9. Mindnode
+10. OmniPlan - Mac 上优秀的项目管理软件
+11. [wakatime](https://wakatime.com/) - 量化你的代码
+12. [rescuetime](https://www.rescuetime.com/) - 工作习惯养成
+13. [trackingtime](https://trackingtime.co/)
 
 ## Company
 1. RTX
