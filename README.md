@@ -311,6 +311,8 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 
 ## Genymotion
 
+[Genymotion](https://www.genymotion.com) 是 Android 平台上速度快，功能强大的模拟器平台，可以去官网下载安装，不过模拟器的运行需要 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 的支持。
+
 ## VersionControl
 1. SourceTree
 2. Tower
