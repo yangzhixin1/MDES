@@ -219,7 +219,6 @@ nvm alias default v4.4.4
 - pigments
 - project-manager
 - nuclide
-- project manager
 
 **themes**
 
@@ -300,9 +299,12 @@ IdentityFile ~/.ssh/id_rsa_coding.net
 - [XamarinStudio](https://www.xamarin.com/download)
 
 XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是一个划时代的意义，从这个版本开始意味着微软的技术终于在这么多年之后被开发者搬到了所有平台，这个版本最让我期望的就是 Xamarin Previewer 的功能和 Skin Change，其实在2、3年前我也有这样的想法，可惜我自己没能力实现，不过这么吊的功能怎么安装呢，这里说总结下：
-1. 默认情况下载的 XamarinInstaller 还是安装5 的版本，所以要在打开XamarinStudio之后，点击 `update channel `  切换到 `alpha` 下，然后 Xamarin Studio 就会自动帮你下载 6.1 版本，并下载相应平台的依赖库.
-2. 下载完后，重新启动就可以在设置里修改 Xamarin Studio 的皮肤
-3. 新建工程后，默认还是用的 xamarin.forms 库还是 5 的时候默认的，而且也不会自动升级，这个原因是由于在升级到 Xamarin Studio 6.1 之后, `nuget` 仓库的 `sources` 没有了，这时候你需要去设置里自己设置下，然后重新 `update solution package` 就会下载最新版本的 xamarin.forms，这个时候打开 `xaml` 文件就可以实时预览相应的界面了
+
+  + 默认情况下载的 XamarinInstaller 还是安装5 的版本，所以要在打开XamarinStudio之后，点击 `update channel `  切换到 `alpha` 下，然后 Xamarin Studio 就会自动帮你下载 6.1 版本，并下载相应平台的依赖库.
+
+  + 下载完后，重新启动就可以在设置里修改 Xamarin Studio 的皮肤
+
+  + 新建工程后，默认还是用的 xamarin.forms 库还是 5 的时候默认的，而且也不会自动升级，这个原因是由于在升级到 Xamarin Studio 6.1 之后, `nuget` 仓库的 `sources` 没有了，这时候你需要去设置里自己设置下，然后重新 `update solution package` 就会下载最新版本的 xamarin.forms，这个时候打开 `xaml` 文件就可以实时预览相应的界面了
 
 - [InteliJ IDEA]()
 - [WebStorm]()
