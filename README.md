@@ -365,3 +365,4 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 - [ ] use shell to install the MDES
 - [ ] use swift to install the MDES
 - [ ] collect from community
+- [ ] save IDE config at Online
