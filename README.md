@@ -309,6 +309,7 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
   + 编译并运行 Android 工程
   + 编辑 code template
     - `propfull`
+    
       ```sh
       private $type$ _$name$;
       public $type$ $name$ {
