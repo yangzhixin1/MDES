@@ -306,6 +306,17 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 
   + 新建工程后，默认还是用的 xamarin.forms 库还是 5 的时候默认的，而且也不会自动升级，这个原因是由于在升级到 Xamarin Studio 6.1 之后, `nuget` 仓库的 `sources` 没有了，这时候你需要去设置里自己设置下，然后重新 `update solution package` 就会下载最新版本的 xamarin.forms，这个时候打开 `xaml` 文件就可以实时预览相应的界面了
 
+  + 编译并运行 Android 工程
+  + 编辑 code template
+    - `propfull`
+      ```sh
+      private $type$ _$name$;
+      public $type$ $name$ {
+        get { return _$name$; }
+        set { _$name$ = value; }
+      }
+      ```
+
 - [InteliJ IDEA]()
 - [WebStorm]()
 - [AppCode]()
