@@ -237,10 +237,13 @@ pod setup
 
 ## Private Pod Library
 
-- [ ] [CocoaPod-介绍](todo)
-- [ ] [CocoaPod-使用指南](todo)
-- [ ] [CocoaPod-创建私有仓库](todo)
-- [ ] [CocoaPod-创建公共依赖库并发布](todo)
+- [ ] [CocoaPods-介绍](todo)
+- [ ] [CocoaPods-使用指南](todo)
+- [ ] [CocoaPods-情况说明以及升级](todo)
+- [ ] [CocoaPods-App使用](todo)
+- [ ] [CocoaPods-创建私有仓库](todo)
+- [ ] [CocoaPods-创建公共依赖库并发布](todo)
+- [ ] [CocoaPods-Carthage抉择](todo)
 
 ## Carthage
 
@@ -309,7 +312,7 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
   + 编译并运行 Android 工程
   + 编辑 code template
     - `propfull`
-    
+
       ```sh
       private $type$ _$name$;
       public $type$ $name$ {
