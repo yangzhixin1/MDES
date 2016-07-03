@@ -209,10 +209,10 @@ open CONSOLA*.TTF
 
 ## Node
 
-就像上面的 Pyenv ，所有的脚本语言都需要一个 Version Manager， JavaScript 也不例外，这里推荐 NVM，当然也可以用 n， [NVM](https://github.com/creationix/nvm) 安装方法如下：
+就像上面的 Pyenv ，所有的脚本语言都需要一个 Version Manager， JavaScript 也不例外，这里推荐 NVM，当然也可以用 n， [NVM](https://github.com/creationix/nvm) 安装和更新方法如下：
 
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
 ```
 
 安装完成后要配置下环境变量：
@@ -292,7 +292,6 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa_github
 ssh -T git@github.com
 ```
-
 
 ```
 ssh-keygen -t rsa -b 4096 -C "xxxx@xxx.com" -f ~/.ssh/id_rsa_coding.net
@@ -389,9 +388,6 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 11. [wakatime](https://wakatime.com/) - 量化你的代码
 12. [rescuetime](https://www.rescuetime.com/) - 工作习惯养成
 13. [trackingtime](https://trackingtime.co/)
-
-## Company
-1. RTX
 
 ## TODO
 - [x] make the MDES document
