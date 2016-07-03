@@ -2,13 +2,13 @@
 
 每当开发环境出现无法修复的场景时，大部分开发者都会对重做操作系统望而生畏，无非是因为很多开发配置参数和IDE配置需要重新安装和设置，浪费青春和生命.
 
-MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的开发环境的搭建过程，并且这里是按照安装 **先后顺序** 进行编写的.
+MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的开发环境的搭建过程，注意这里是按照安装 **先后顺序** 进行编写的.
 
 ## Lantern
 作为一个开发者，尤其是他妈的中国开发者（对不起这里爆粗口了），如果不能够访问谷歌等同于缺少了一个解决问题的利器，所以要做的第一步就是要搞科学上网，安装配置最简单的工具就是 [lantern](https://github.com/getlantern/lantern).
 
 ## GreenVPN  
-[greenvpn](https://www.getgreenjsq.com/) 上大学的时候就在用了，算是一种留恋吧，不过平常用的很少了.
+[GreenVPN](https://www.getgreenjsq.com/) 上大学的时候就在用了，算是一种留恋吧，不过平常用的很少了.
 
 ## Xcode  
 
@@ -87,13 +87,13 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
 ## Shadowsocks
 
-[Shadowsocks](shadowsocks.com) 也是非常好的科学上网软件，Github 地址为：https://github.com/shadowsocks/shadowsocks.
+[Shadowsocks](https://github.com/shadowsocks/shadowsocks) 也是非常好的科学上网软件，其中有一家比较好的服务商也叫 [Shadowsocks](https://shadowsocks.com/)
 
-为什么要在这里才介绍这个软件不跟上面的 Lantern、GreenVPN 一起介绍? 这里是因为 Shadowsocks 更像是一个可以编程的玩具，可以随便配置，需要安装跟中脚本来支持它运行，所以上面的脚本安装的差不多了，我们到这里才能够介绍Shadowsocks.
+为什么要在这里才介绍这个软件不跟上面的 Lantern、GreenVPN 一起介绍? 这里是因为 Shadowsocks 更像是一个可以编程的玩具，可以随便配置，需要安装辅助脚本来支持它运行，所以上面的脚本安装的差不多了，我们到这里才能够介绍 Shadowsocks.
 
 [搬瓦工自己搭建 Shadowsocks 服务器](http://blog.csdn.net/wwj_748/article/details/50636127)
 
-安装完 Shadowsocks 后配置上面设置的共用服务，如下：
+安装完 Shadowsocks 后配置上面设置的服务器配置(也可生成二维码后扫描)，如下：
 
 ```
 ip : xxx.xxx.xxx.xxx
