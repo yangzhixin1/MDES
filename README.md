@@ -34,11 +34,15 @@ curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/
 - Clangformat
 - VVDocument
 - XAlign
+- JSPatchX - 编写JSPatch脚本所用
+- SketchExporter
+- xcode-wakatime - 有效的统计code-time
 
 **Theme**
 
 - Amoyly
 - Aqueducts 3.0 (Night)
+- WWDC 2016
 
 **Template**
 
@@ -111,7 +115,6 @@ Shadowsocks 里面集成了自动从 GoogleCode 下载GFWList并且转换成 PAC
 sudo easy_install pip
 pip --version
 sudo pip install gfwlist2pac
-
 ```
 
 下载 [update_gfwlist.sh](https://gist.github.com/VincentSit/b5b112d273513f153caf23a9da112b3a)
@@ -124,12 +127,21 @@ chmod +x update_gfwlist.sh
 ./update_gfwlist.sh
 ```
 
+如果运行脚本后提示 `.ShadowsocksX` 文件夹找到不，可以自行在用户根目录下穿件下该文件夹。
+
+如果觉得每次都要手动执行该脚本太麻烦可以用 `cron` 来做一个定时任务执行 pac 的更新任务，示例如下:
+
+```
+0 12 * * * sh your_folder_path/update_gfwlist.sh
+```
+
 ### Shadowsocks + Terminal
 
 ```
 brew install proxychains-ng
 cd
 mkdir .proxychains
+cd .proxychains
 touch proxychains.conf
 ```
 
@@ -197,14 +209,24 @@ open CONSOLA*.TTF
 
 ## Node
 
-就像上面的 Pyenv ，所有的脚本语言都需要一个 Version Manager， JavaScript 也不例外，这里推荐 NVM，当然也可以用 n， NVM 安装方法如下：
+就像上面的 Pyenv ，所有的脚本语言都需要一个 Version Manager， JavaScript 也不例外，这里推荐 NVM，当然也可以用 n， [NVM](https://github.com/creationix/nvm) 安装方法如下：
 
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
+```
+
+安装完成后要配置下环境变量：
+
+```
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm' >> ~/.zshrc
+```
+
+常用指令如下：
+```
 nvm ls-remote
-nvm install v4.4.4
-nvm install v0.10.40
-nvm alias default v4.4.4
+nvm install your_version
+nvm alias default your_version
 ```
 
 ## Atom
@@ -218,13 +240,17 @@ nvm alias default v4.4.4
 - git-time-machine
 - pigments
 - project-manager
+- wakatime
 - nuclide
 
 **themes**
 
 - Nucleus Dark UI
+- Seti-ui
 
 ## Cocoapods
+
+Error installing pods:activesupport requires Ruby version >= 2.2.2 处理，
 
 ```
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
@@ -264,11 +290,14 @@ brew install carthage
 ssh-keygen -t rsa -b 4096 -C "xxxx@xxx.com" -f ~/.ssh/id_rsa_github
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa_github
+ssh -T git@github.com
+```
 
-
+```
 ssh-keygen -t rsa -b 4096 -C "xxxx@xxx.com" -f ~/.ssh/id_rsa_coding.net
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa_coding.net
+ssh -vvvT git@git.coding.net
 ```
 
 生成相应的 SSH key 后，需要在 .ssh 文件夹下生成相应的 config 文件，我一般的配置如下：
@@ -282,7 +311,6 @@ Identityfile ~/.ssh/id_rsa_github
 
 # Coding.net (developer_afi@163.com)
 Host git.coding.net
-User developer_afi@163.com
 User CoderAFI
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_coding.net
