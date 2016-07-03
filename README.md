@@ -250,7 +250,7 @@ nvm alias default your_version
 
 ## Cocoapods
 
-[CocoaPods](https://cocoapods.org/) 是Objective-C和Swift的依赖管理工具，官方安装方法如下：
+[CocoaPods](https://cocoapods.org/) 是 Objective-C 和 Swift 的依赖管理工具，官方安装方法如下：
 ```
 sudo gem install cocoapods
 ```
@@ -268,6 +268,8 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
+
+也可以参考可以参考这个地址：https://segmentfault.com/a/1190000003784636
 
 更新ruby脚本如下：
 
@@ -298,15 +300,17 @@ podenv global 1.0.1
 
 随着 1.0+ 版本的发布，可以根据自己的喜好来安装 [Cocoapods App](https://cocoapods.org/app).
 
-## Private Pod Library
+## 如何更好地使用 CocoaPods
 
 - [ ] [CocoaPods-介绍](todo)
 - [ ] [CocoaPods-使用指南](todo)
 - [ ] [CocoaPods-情况说明以及升级](todo)
 - [ ] [CocoaPods-App使用](todo)
-- [ ] [CocoaPods-创建私有仓库](todo)
+- [ ] [CocoaPods-创建私有仓库和镜像](todo)
 - [ ] [CocoaPods-创建公共依赖库并发布](todo)
 - [ ] [CocoaPods-Carthage抉择](todo)
+
+> 如果已经按照错误的方法安装了 Cocoapods 想要卸载的话，[这里](http://www.jianshu.com/p/8b61b421dd76)给出了方法
 
 ## Carthage
 
@@ -352,6 +356,10 @@ User CoderAFI
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_coding.net
 ```
+
+## BaiduPCS
+
+[BaiduPCS](https://github.com/GangZhuo/BaiduPCS) 是国人开发的百度网盘的命令行工具。
 
 ## JAVA
 
