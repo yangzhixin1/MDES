@@ -250,16 +250,53 @@ nvm alias default your_version
 
 ## Cocoapods
 
-Error installing pods:activesupport requires Ruby version >= 2.2.2 处理，
+[CocoaPods](https://cocoapods.org/) 是Objective-C和Swift的依赖管理工具，官方安装方法如下：
+```
+sudo gem install cocoapods
+```
+
+但是随着CocoaPods 1.0 以上版本的发布，出现了以下三个问题：
+
+- 安装的过程中会提示：`Error installing pods:activesupport requires Ruby version >= 2.2.2`
+- gem源特别慢
+- 不同的工程可能用了不同版本的 CocoaPodsod ，又出现了版本切换的问题（真是日了狗）
+
+解决第一个问题，就是升级ruby，这里用 [rvm](https://rvm.io/)来升级，rvm 安装和更新脚本如下：
+
+```
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+\curl -sSL https://get.rvm.io | bash -s stable
+```
+
+更新ruby脚本如下：
+
+```
+rvm install 2.3.0
+rvm --default use 2.3.0
+```
+
+解决第二个问题，要替换下阿里的ruby镜像：
 
 ```
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 gem sources -l
-sudo gem install cocoapods
-pod setup
 ```
 
-随着 1.0.0 版本的发布，可以根据自己的喜好来安装 Cocoapods App.
+解决第三个问题，这里给大家推荐 [podenv](https://github.com/kylef/podenv)，安装脚本如下：
+
+```
+brew install kylef/formulae/podenv
+echo 'export PATH="$HOME/.podenv/bin:$PATH"' >> ~/.zshrc
+```
+
+```
+podenv install 1.0.1
+podenv install 1.0.0
+podenv global 1.0.1
+```
+
+随着 1.0+ 版本的发布，可以根据自己的喜好来安装 [Cocoapods App](https://cocoapods.org/app).
 
 ## Private Pod Library
 
