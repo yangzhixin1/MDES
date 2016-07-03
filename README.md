@@ -359,7 +359,16 @@ IdentityFile ~/.ssh/id_rsa_coding.net
 
 ## BaiduPCS
 
-[BaiduPCS](https://github.com/GangZhuo/BaiduPCS) 是国人开发的百度网盘的命令行工具。
+[BaiduPCS](https://github.com/GangZhuo/BaiduPCS) 是国人开发的百度网盘的命令行工具,安装脚本如下：
+
+```
+cd your_want_install_folder
+git clone https://github.com/GangZhuo/BaiduPCS.git
+cd BaiduPCS
+make clean
+make
+make install #将安装到/usr/local/bin下
+```
 
 ## JAVA
 
@@ -433,6 +442,7 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 11. [wakatime](https://wakatime.com/) - 量化你的代码
 12. [rescuetime](https://www.rescuetime.com/) - 工作习惯养成
 13. [trackingtime](https://trackingtime.co/)
+14. DropBox - 可以在设置 Shadowsocks 代理进行访问
 
 ## TODO
 - [x] make the MDES document
