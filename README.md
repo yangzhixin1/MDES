@@ -421,6 +421,8 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 
 [Genymotion](https://www.genymotion.com) 是 Android 平台上速度快，功能强大的模拟器平台，可以去官网下载安装，不过模拟器的运行需要 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 的支持。
 
+> 注意： 在安装完 Genymotion 和 VirtualBox 之后，要进行登录和下载相应平台下的模拟器，操作完之后就可以启动相应平台下的模拟器了，不过这个时候如果你提示 `Unable to start virutal device`，你需要用 VirtualBox 打开你的模拟器的设置，面板下面可能会报一些无效的参数对它们做相应的修改，我这里还碰到了声音驱动没有选中的情况，都要单独处理下，这些操作完成后，再用 Genymotion 启动下应该就没有问题了，总之，这个得看人品。
+
 ## VersionControl
 1. SourceTree
 2. Tower
