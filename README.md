@@ -2,13 +2,13 @@
 
 每当开发环境出现无法修复的场景时，大部分开发者都会对重做操作系统望而生畏，无非是因为很多开发配置参数和IDE配置需要重新安装和设置，浪费青春和生命.
 
-MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的开发环境的搭建过程，并且这里是按照安装 **先后顺序** 进行编写的.
+MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的开发环境的搭建过程，注意这里是按照安装 **先后顺序** 进行编写的.
 
 ## Lantern
 作为一个开发者，尤其是他妈的中国开发者（对不起这里爆粗口了），如果不能够访问谷歌等同于缺少了一个解决问题的利器，所以要做的第一步就是要搞科学上网，安装配置最简单的工具就是 [lantern](https://github.com/getlantern/lantern).
 
 ## GreenVPN  
-[greenvpn](https://www.getgreenjsq.com/) 上大学的时候就在用了，算是一种留恋吧，不过平常用的很少了.
+[GreenVPN](https://www.getgreenjsq.com/) 上大学的时候就在用了，算是一种留恋吧，不过平常用的很少了.
 
 ## Xcode  
 
@@ -34,11 +34,15 @@ curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/
 - Clangformat
 - VVDocument
 - XAlign
+- JSPatchX - 编写JSPatch脚本所用
+- SketchExporter
+- xcode-wakatime - 有效的统计code-time
 
 **Theme**
 
 - Amoyly
 - Aqueducts 3.0 (Night)
+- WWDC 2016
 
 **Template**
 
@@ -68,6 +72,15 @@ Homebrew 就不用多介绍了， OSX 上必备的程序包安装工具，安装
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+## AutoJump
+
+[autojump](https://github.com/wting/autojump) -  a faster way to navigate your filesystem，安装脚本如下:
+
+```
+brew install autojump
+echo '[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh' >> ~/.zshrc
+```
+
 ## Pyenv
 
 碰到脚本语言，就势必出现大家在开发的时候选择不同版本进行开发，这个时候就出现了各种 Version Manager，像 Python 这种一直维持两个版本的语言来说，更需要用这种工具来随时切换各种 Python 脚本，所以就需要[pyenv](https://github.com/yyuu/pyenv)来管理.
@@ -83,13 +96,13 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
 ## Shadowsocks
 
-[Shadowsocks](shadowsocks.com) 也是非常好的科学上网软件，Github 地址为：https://github.com/shadowsocks/shadowsocks.
+[Shadowsocks](https://github.com/shadowsocks/shadowsocks) 也是非常好的科学上网软件，其中有一家比较好的服务商也叫 [Shadowsocks](https://shadowsocks.com/)
 
-为什么要在这里才介绍这个软件不跟上面的 Lantern、GreenVPN 一起介绍? 这里是因为 Shadowsocks 更像是一个可以编程的玩具，可以随便配置，需要安装跟中脚本来支持它运行，所以上面的脚本安装的差不多了，我们到这里才能够介绍Shadowsocks.
+为什么要在这里才介绍这个软件不跟上面的 Lantern、GreenVPN 一起介绍? 这里是因为 Shadowsocks 更像是一个可以编程的玩具，可以随便配置，需要安装辅助脚本来支持它运行，所以上面的脚本安装的差不多了，我们到这里才能够介绍 Shadowsocks.
 
 [搬瓦工自己搭建 Shadowsocks 服务器](http://blog.csdn.net/wwj_748/article/details/50636127)
 
-安装完 Shadowsocks 后配置上面设置的共用服务，如下：
+安装完 Shadowsocks 后配置上面设置的服务器配置(也可生成二维码后扫描)，如下：
 
 ```
 ip : xxx.xxx.xxx.xxx
@@ -111,7 +124,6 @@ Shadowsocks 里面集成了自动从 GoogleCode 下载GFWList并且转换成 PAC
 sudo easy_install pip
 pip --version
 sudo pip install gfwlist2pac
-
 ```
 
 下载 [update_gfwlist.sh](https://gist.github.com/VincentSit/b5b112d273513f153caf23a9da112b3a)
@@ -124,12 +136,21 @@ chmod +x update_gfwlist.sh
 ./update_gfwlist.sh
 ```
 
+如果运行脚本后提示 `.ShadowsocksX` 文件夹找到不，可以自行在用户根目录下穿件下该文件夹。
+
+如果觉得每次都要手动执行该脚本太麻烦可以用 `cron` 来做一个定时任务执行 pac 的更新任务，示例如下:
+
+```
+0 12 * * * sh your_folder_path/update_gfwlist.sh
+```
+
 ### Shadowsocks + Terminal
 
 ```
 brew install proxychains-ng
 cd
 mkdir .proxychains
+cd .proxychains
 touch proxychains.conf
 ```
 
@@ -197,14 +218,24 @@ open CONSOLA*.TTF
 
 ## Node
 
-就像上面的 Pyenv ，所有的脚本语言都需要一个 Version Manager， JavaScript 也不例外，这里推荐 NVM，当然也可以用 n， NVM 安装方法如下：
+就像上面的 Pyenv ，所有的脚本语言都需要一个 Version Manager， JavaScript 也不例外，这里推荐 NVM，当然也可以用 n， [NVM](https://github.com/creationix/nvm) 安装和更新方法如下：
 
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
+```
+
+安装完成后要配置下环境变量：
+
+```
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm' >> ~/.zshrc
+```
+
+常用指令如下：
+```
 nvm ls-remote
-nvm install v4.4.4
-nvm install v0.10.40
-nvm alias default v4.4.4
+nvm install your_version
+nvm alias default your_version
 ```
 
 ## Atom
@@ -218,32 +249,85 @@ nvm alias default v4.4.4
 - git-time-machine
 - pigments
 - project-manager
+- wakatime
 - nuclide
 
 **themes**
 
 - Nucleus Dark UI
+- Seti-ui
 
 ## Cocoapods
+
+[CocoaPods](https://cocoapods.org/) 是 Objective-C 和 Swift 的依赖管理工具，官方安装方法如下：
+```
+sudo gem install cocoapods
+```
+
+但是随着CocoaPods 1.0 以上版本的发布，出现了以下三个问题：
+
+- 安装的过程中会提示：`Error installing pods:activesupport requires Ruby version >= 2.2.2`
+- gem源特别慢
+- 不同的工程可能用了不同版本的 CocoaPodsod ，又出现了版本切换的问题（真是日了狗）
+
+解决第一个问题，就是升级ruby，这里用 [rvm](https://rvm.io/)来升级，rvm 安装和更新脚本如下：
+
+```
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+\curl -sSL https://get.rvm.io | bash -s stable
+```
+
+也可以参考可以参考这个地址：https://segmentfault.com/a/1190000003784636
+
+更新ruby脚本如下：
+
+```
+rvm install 2.3.0
+rvm --default use 2.3.0
+```
+
+解决第二个问题，要替换下阿里的ruby镜像：
 
 ```
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 gem sources -l
-sudo gem install cocoapods
-pod setup
 ```
 
-随着 1.0.0 版本的发布，可以根据自己的喜好来安装 Cocoapods App.
+解决第三个问题，这里给大家推荐 [podenv](https://github.com/kylef/podenv)，安装脚本如下：
 
-## Private Pod Library
+```
+brew install kylef/formulae/podenv
+echo 'export PATH="$HOME/.podenv/bin:$PATH"' >> ~/.zshrc
+```
+
+```
+podenv install 1.0.1
+podenv install 1.0.0
+podenv global 1.0.1
+```
+
+随着 1.0+ 版本的发布，可以根据自己的喜好来安装 [Cocoapods App](https://cocoapods.org/app).
+
+> 注意： 在用 podenv 安装的 `0.39.0 + ruby 2.3.0` 的情况在使用时可能会出现 `NoMethodError - undefined method 'to_ary'` 这种错误，原因是因为  Cocoapods 0.39.0 用到了一个方法在 ruby 2.3.0 中被弃用了，[这个 CocoaPods 官方已经解决](https://github.com/CocoaPods/CocoaPods/pull/4368)，但是并似乎并没有再重新发布到 0.39.0的正式版中，所以我们还得找到源码自己修改下，首先找到 `your_pod_path/cocoapods-0.39.0/lib/cocoapods/resolver/lazy_specification.rb` 这个文件，其次在第16行之前加入如下函数：
+
+```
+def respond_to_missing?(method, include_all = false)
+  specification.respond_to?(method, include_all)
+end
+```
+
+## 如何更好地使用 CocoaPods
 
 - [ ] [CocoaPods-介绍](todo)
 - [ ] [CocoaPods-使用指南](todo)
 - [ ] [CocoaPods-情况说明以及升级](todo)
 - [ ] [CocoaPods-App使用](todo)
-- [ ] [CocoaPods-创建私有仓库](todo)
+- [ ] [CocoaPods-创建私有仓库和镜像](todo)
 - [ ] [CocoaPods-创建公共依赖库并发布](todo)
 - [ ] [CocoaPods-Carthage抉择](todo)
+
+> 如果已经按照错误的方法安装了 Cocoapods 想要卸载的话，[这里](http://www.jianshu.com/p/8b61b421dd76)给出了方法
 
 ## Carthage
 
@@ -264,11 +348,14 @@ brew install carthage
 ssh-keygen -t rsa -b 4096 -C "xxxx@xxx.com" -f ~/.ssh/id_rsa_github
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa_github
+ssh -T git@github.com
+```
 
-
+```
 ssh-keygen -t rsa -b 4096 -C "xxxx@xxx.com" -f ~/.ssh/id_rsa_coding.net
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa_coding.net
+ssh -vvvT git@git.coding.net
 ```
 
 生成相应的 SSH key 后，需要在 .ssh 文件夹下生成相应的 config 文件，我一般的配置如下：
@@ -282,10 +369,22 @@ Identityfile ~/.ssh/id_rsa_github
 
 # Coding.net (developer_afi@163.com)
 Host git.coding.net
-User developer_afi@163.com
 User CoderAFI
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_coding.net
+```
+
+## BaiduPCS
+
+[BaiduPCS](https://github.com/GangZhuo/BaiduPCS) 是国人开发的百度网盘的命令行工具,安装脚本如下：
+
+```
+cd your_want_install_folder
+git clone https://github.com/GangZhuo/BaiduPCS.git
+cd BaiduPCS
+make clean
+make
+make install #将安装到/usr/local/bin下
 ```
 
 ## JAVA
@@ -330,6 +429,8 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 
 [Genymotion](https://www.genymotion.com) 是 Android 平台上速度快，功能强大的模拟器平台，可以去官网下载安装，不过模拟器的运行需要 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 的支持。
 
+> 注意： 在安装完 Genymotion 和 VirtualBox 之后，要进行登录和下载相应平台下的模拟器，操作完之后就可以启动相应平台下的模拟器了，不过这个时候如果你提示 `Unable to start virutal device`，你需要用 VirtualBox 打开你的模拟器的设置，面板下面可能会报一些无效的参数对它们做相应的修改，我这里还碰到了声音驱动没有选中的情况，都要单独处理下，这些操作完成后，再用 Genymotion 启动下应该就没有问题了，总之，这个得看人品。
+
 ## VersionControl
 1. SourceTree
 2. Tower
@@ -364,9 +465,7 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 11. [wakatime](https://wakatime.com/) - 量化你的代码
 12. [rescuetime](https://www.rescuetime.com/) - 工作习惯养成
 13. [trackingtime](https://trackingtime.co/)
-
-## Company
-1. RTX
+14. DropBox - 可以在设置 Shadowsocks 代理进行访问
 
 ## TODO
 - [x] make the MDES document
