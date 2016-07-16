@@ -346,6 +346,10 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 2. PhotoShop
 3. Adobe DX
 
+## SQL
+
+1. NavicatSQL
+
 ## Other
 1. Chrome
 2. WeiXin
