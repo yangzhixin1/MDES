@@ -452,6 +452,13 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 1. NavicatSQL
 2. MySQLWorkbench
 
+## FTP
+1. Transmit
+
+## System
+1. iStatMenus
+2. CleanMyMac
+
 ## Other
 1. Chrome
 2. WeiXin
@@ -459,14 +466,14 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 4. Sip
 5. 网易云音乐
 6. Foxmail
-7. iStatMenus
-8. CleanMyMac
-9. Mindnode
-10. OmniPlan - Mac 上优秀的项目管理软件
-11. [wakatime](https://wakatime.com/) - 量化你的代码
-12. [rescuetime](https://www.rescuetime.com/) - 工作习惯养成
-13. [trackingtime](https://trackingtime.co/)
-14. DropBox - 可以在设置 Shadowsocks 代理进行访问
+7. Mindnode
+8. OmniPlan - Mac 上优秀的项目管理软件
+9. [wakatime](https://wakatime.com/) - 量化你的代码
+10. [rescuetime](https://www.rescuetime.com/) - 工作习惯养成
+11. [trackingtime](https://trackingtime.co/)
+12. DropBox - 可以在设置 Shadowsocks 代理进行访问
+13. Charles
+14. Gliffy
 
 ## TODO
 - [x] make the MDES document
