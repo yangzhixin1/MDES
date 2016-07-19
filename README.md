@@ -450,6 +450,7 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 ## SQL
 
 1. NavicatSQL
+2. MySQLWorkbench
 
 ## Other
 1. Chrome
