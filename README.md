@@ -251,6 +251,7 @@ nvm alias default your_version
 - project-manager
 - wakatime
 - nuclide
+- omnisharp
 
 **themes**
 
