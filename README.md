@@ -273,8 +273,10 @@ nvm alias default your_version
     ```
 
   + 重启 Atom，会安装依赖项 `advanced-open-file`、`atom-yeoman`、`json-schema`、`linter`，安装的过程要稍微等一会
-  + 安装完成后，`cmd+shift+p` 输入 omnisharp:new project 选择你想要的项目类型
-  + 项目完成后，随便打开一个 .cs 文件后就会连接 omnisharp 的服务器，进行语法校验等一系列操作，这个过程要要稍微等一会才能完成
+
+  + 安装完成后，`cmd+shift+p` 输入 Omnisharp atom: New Project 选择你想要创建的项目类型，内部是采用 `Yeoman` + `generator-aspnet` 来创建
+
+  + 项目完成后，随便打开一个 .cs 文件后就会连接 `Omnisharp` 的服务器，进行语法校验和智能提示等一系列操作，这个过程我尝试的结果是上来报各种语法错误，过一会校验完成后就没有了，不过体验不是特别好
 
 **themes**
 
