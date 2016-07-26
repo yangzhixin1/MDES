@@ -263,7 +263,7 @@ nvm alias default your_version
 
   + 安装 [.NET Core](https://www.microsoft.com/net/core#macos) 来配合 `.NET` 平台下的不同类型应用程序的编译
 
-  + 安装 [Yeoman](http://yeoman.io/)、[generator-aspnet](https://github.com/OmniSharp/generator-aspnet)、[bower](https://bower.io)、 [grunt-cli](http://gruntjs.com)、[gulp](http://gulpjs.com) [**前段技术什么时候能大一统**](https://docs.asp.net/en/latest/client-side/yeoman.html?#building-projects-with-yeoman)
+  + 安装 [Yeoman](http://yeoman.io/)、[generator-aspnet](https://github.com/OmniSharp/generator-aspnet)、[bower](https://bower.io)、 [grunt-cli](http://gruntjs.com)、[gulp](http://gulpjs.com) [**前端技术什么时候能大一统**](https://docs.asp.net/en/latest/client-side/yeoman.html?#building-projects-with-yeoman)
 
     ```sh
     npm install -g yo bower grunt-cli gulp
