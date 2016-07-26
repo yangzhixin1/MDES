@@ -255,7 +255,7 @@ nvm alias default your_version
 
   OmniSharp 可以让你更好的进行 .NET 跨平台开发。支持 `Atom`、`Brackets`、`Terminal`、`Emacs`、`Sublime Text`、`Vim`、`Visual Studio Code` ，基本上市面上比较流程的编辑器都支持了。这里主要介绍下如何结合 Atom 使用：
 
-  + 安装 `XamarinStudio`，详细安装方法在下面的 `IDE` 部分中，因为 `OmniSharp` 依赖于 `mono` 框架，安装 `Xamarin Studio` 会默认安装 `mono` 框架，如果不想安装这么大的 `Xamarin Studio`，同样你可以用 `homebrew` 来安装 `mono rutime` 来解决这个问题
+  + 安装 `XamarinStudio`，详细安装方法在下面的 `IDE` 部分中，因为 `OmniSharp` 依赖于 `mono` 框架，安装 `Xamarin Studio` 会默认安装 `mono` 框架，如果不想安装这么大的 `Xamarin Studio`，同样也可以用 `homebrew` 来安装 `mono rutime` 来解决这个问题
     ```sh
     brew doctor
     brew update && brew install mono
