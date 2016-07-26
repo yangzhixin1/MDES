@@ -256,6 +256,9 @@ nvm alias default your_version
   OmniSharp 可以让你更好的进行 .NET 跨平台开发。支持 `Atom`、`Brackets`、`Terminal`、`Emacs`、`Sublime Text`、`Vim`、`Visual Studio Code` ，基本上市面上比较流程的编辑器都支持了。这里主要介绍下如何结合 Atom 使用：
 
   + 安装 `XamarinStudio`，详细安装方法在下面的 `IDE` 部分中，因为 `OmniSharp` 依赖于 `mono` 框架，安装 `Xamarin Studio` 会默认安装 `mono` 框架，如果不想安装这么大的 `Xamarin Studio`，同样你可以用 `homebrew` 来安装 `mono rutime` 来解决这个问题
+    ```sh
+    brew update && brew install mono
+    ```
 
   + 安装 [.NET Core](https://www.microsoft.com/net/core#macos) 来配合 `.NET` 平台下的不同应用程序版本的编译
 
@@ -276,7 +279,7 @@ nvm alias default your_version
 
   + 安装完成后，`cmd+shift+p` 输入 Omnisharp atom: New Project 选择你想要创建的项目类型，内部是采用 `Yeoman` + `generator-aspnet` 来创建
 
-  + 项目完成后，随便打开一个 .cs 文件后就会连接 `Omnisharp` 的服务器，进行语法校验和智能提示等一系列操作，这个过程我尝试的结果是上来报各种语法错误，过一会校验完成后就没有了，不过体验不是特别好
+  + 项目完成后，随便打开一个 .cs 文件后就会连接 `Omnisharp` 的服务器，进行语法校验和智能提示等一系列操作，这个过程尝试的结果是开始会报各种语法错误，过一会校验完成后就没有了，不过体验不是特别好
 
 **themes**
 
