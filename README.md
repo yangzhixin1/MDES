@@ -252,9 +252,13 @@ nvm alias default your_version
 - wakatime
 - nuclide
 - omnisharp
-OmniSharp 可以让你更好的进行 .NET 跨平台开发。支持 `Atom`、`Brackets`、`Terminal`、`Emacs`、`Sublime Text`、`Vim`、`Visual Studio Code` ，基本上市面上比较流程的编辑器都支持了。这里主要介绍下如何结合 Atom 使用：
+
+  OmniSharp 可以让你更好的进行 .NET 跨平台开发。支持 `Atom`、`Brackets`、`Terminal`、`Emacs`、`Sublime Text`、`Vim`、`Visual Studio Code` ，基本上市面上比较流程的编辑器都支持了。这里主要介绍下如何结合 Atom 使用：
+
   + 安装 `XamarinStudio`，详细安装方法在下面的 `IDE` 部分中，因为 `OmniSharp` 依赖于 `mono` 框架，安装 `Xamarin Studio` 会默认安装 `mono` 框架，如果不想安装这么大的 `Xamarin Studio`，同样你可以用 `homebrew` 来安装 `mono rutime` 来解决这个问题
+
   + 安装 [.NET Core](https://www.microsoft.com/net/core#macos) 来配合 `.NET` 平台下的不同应用程序版本的编译
+
   + 安装 [Yeoman](http://yeoman.io/)、[generator-aspnet](https://github.com/OmniSharp/generator-aspnet)、[bower](https://bower.io)、 [grunt-cli](http://gruntjs.com)、[gulp](http://gulpjs.com) [**前段技术什么时候能大一统**](https://docs.asp.net/en/latest/client-side/yeoman.html?#building-projects-with-yeoman)
 
     ```sh
