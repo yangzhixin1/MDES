@@ -280,7 +280,7 @@ nvm alias default your_version
 
   + 安装完成后，`cmd+shift+p` 输入 Omnisharp atom: New Project 选择你想要创建的项目类型，内部是采用 `Yeoman` + `generator-aspnet` 来创建
 
-  + 项目完成后，随便打开一个 .cs 文件后就会连接 `Omnisharp` 的服务器，进行语法校验和智能提示等一系列操作，这个过程尝试的结果是开始会报各种语法错误，过一会校验完成后就没有了，不过体验不是特别好
+  + 项目创建完成后，随便打开一个 .cs 文件后就会连接 `Omnisharp` 的服务器，进行语法校验和智能提示等一系列操作，这个过程我这里尝试的结果是开始会报各种语法错误，过一会校验完成后就没有了，感觉体验不是特别好
 
 **themes**
 
