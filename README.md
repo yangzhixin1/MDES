@@ -257,6 +257,7 @@ nvm alias default your_version
 
   + 安装 `XamarinStudio`，详细安装方法在下面的 `IDE` 部分中，因为 `OmniSharp` 依赖于 `mono` 框架，安装 `Xamarin Studio` 会默认安装 `mono` 框架，如果不想安装这么大的 `Xamarin Studio`，同样你可以用 `homebrew` 来安装 `mono rutime` 来解决这个问题
     ```sh
+    brew doctor
     brew update && brew install mono
     ```
 
