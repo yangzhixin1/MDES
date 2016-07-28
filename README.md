@@ -241,7 +241,14 @@ nvm alias default your_version
 ## Atom
 
 [Atom](https://atom.io/) 被称作21世纪的编辑器，这个称号我认为当之无愧，强大到无所不能的插件机制让你每天都想蹂躏她，哈哈。
-列出一些我比较喜欢的配置项：
+
+Atom 在安装插件的时候需要访问 `Atom AP`、`Amazon S3`、`NPM` 这些服务，但是这些服务在中国要么不能要么速度很慢，可以自 `~/.Atom/.apmrc` 配置文件下添加一下[淘宝的 NPM 镜像](http://npm.taobao.org)：
+
+```sh
+registry = https://registry.npm.taobao.org
+```
+
+这里列出一些我比较喜欢的插件和主题：
 
 **plugin**
 
