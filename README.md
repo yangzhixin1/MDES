@@ -22,7 +22,7 @@ MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的�
 
 如果需要对 Xcode 安装各种个性化的插件，[Alcatraz](http://alcatraz.io/) 将会是不二之选，安装脚本如下：
 
-```sh
+```
 curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh
 ```
 
@@ -91,6 +91,13 @@ echo '[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/
 brew install pyenv
 echo 'export PYENV_ROOT=/usr/local/var/pyenv' >> ~/.zshrc
 echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' >> ~/.zshrc
+
+```
+
+另外需要单独加一条命令到 `zshrc`，[解决 `brew doctor config` 的问题](http://www.dreamxu.com/build-a-basic-python-development-environment/)
+
+```
+alias brew='"env" PATH=${PATH//$(pyenv root)\/shims:/} brew'
 ```
 
 ## Shadowsocks
@@ -359,7 +366,7 @@ end
 经过不断尝试后，发现用 `podenv` 来解决第三个问题会有坑，毕竟 `podenv` 还是比较小众，支持度也不好。经过查询后，找到了[直接用 `rvm` 来解决这个问题的方法](http://blog.csdn.net/focusjava/article/details/51325802)，这里我采用 `gemset` 的方式来管理不同的版本 `CocoaPods` 的 `gem`。
 
 1.0.0 安装脚本如下：
-```sh
+```
 rvm gemset create pods-1.0.0
 rvm gemset use pods-1.0.0
 gem install cocoapods -v 1.0.0
@@ -367,7 +374,7 @@ gem install cocoapods -v 1.0.0
 
 1.0.1 安装脚本如下：
 
-```sh
+```
 rvm gemset create pods-1.0.1
 rvm gemset use pods-1.0.1
 gem install cocoapods -v 1.0.1
@@ -375,7 +382,7 @@ gem install cocoapods -v 1.0.1
 
 0.39.0 安装脚本如下：
 
-```sh
+```
 rvm gemset create pods-0.39.0
 rvm gemset use pods-0.39.0
 gem install cocoapods -v 0.39.0
@@ -480,7 +487,7 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
   + 编辑 code template
     - `propfull`
 
-      ```sh
+      ```
       private $type$ _$name$;
       public $type$ $name$ {
         get { return _$name$; }
