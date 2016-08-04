@@ -348,6 +348,14 @@ podenv install 1.0.0
 podenv global 1.0.1
 ```
 
+> 注意： 在用 podenv 安装的 `0.39.0 + ruby 2.3.0` 的情况在使用时可能会出现 `NoMethodError - undefined method 'to_ary'` 这种错误，原因是因为  Cocoapods 0.39.0 用到了一个方法在 ruby 2.3.0 中被弃用了，[这个 CocoaPods 官方已经解决](https://github.com/CocoaPods/CocoaPods/pull/4368)，但是并似乎并没有再重新发布到 0.39.0的正式版中，所以我们还得找到源码自己修改下，首先找到 `your_pod_path/cocoapods-0.39.0/lib/cocoapods/resolver/lazy_specification.rb` 这个文件，其次在第16行之前加入如下函数：
+
+```
+def respond_to_missing?(method, include_all = false)
+  specification.respond_to?(method, include_all)
+end
+```
+
 经过不断尝试后，发现用 `podenv` 来解决第三个问题会有坑，毕竟 `podenv` 还是比较小众，支持度也不好。经过查询后，找到了[直接用 `rvm` 来解决这个问题的方法](http://blog.csdn.net/focusjava/article/details/51325802)，这里我采用 `gemset` 的方式来管理不同的版本 `CocoaPods` 的 `gem`。
 
 1.0.0 安装脚本如下：
@@ -376,14 +384,6 @@ gem install cocoapods -v 0.39.0
 > 注意，这里用到了 `gemset` 来隔离不同版本的 Cocoapods，另外 `rvm` 自带 `global` 和 `default` 的两个默认 `gemset`，如果没有选择 `gemset` 默认安装在 `default` 下，如果使用 `sudo gem` 权限来安装，则会直接安装到 `global` 下，大家可以根据自己的期望安装
 
 随着 1.0+ 版本的发布，可以根据自己的喜好来安装 [Cocoapods App](https://cocoapods.org/app).
-
-> 注意： 在用 podenv 安装的 `0.39.0 + ruby 2.3.0` 的情况在使用时可能会出现 `NoMethodError - undefined method 'to_ary'` 这种错误，原因是因为  Cocoapods 0.39.0 用到了一个方法在 ruby 2.3.0 中被弃用了，[这个 CocoaPods 官方已经解决](https://github.com/CocoaPods/CocoaPods/pull/4368)，但是并似乎并没有再重新发布到 0.39.0的正式版中，所以我们还得找到源码自己修改下，首先找到 `your_pod_path/cocoapods-0.39.0/lib/cocoapods/resolver/lazy_specification.rb` 这个文件，其次在第16行之前加入如下函数：
-
-```
-def respond_to_missing?(method, include_all = false)
-  specification.respond_to?(method, include_all)
-end
-```
 
 ## 如何更好地使用 CocoaPods
 
