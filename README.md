@@ -89,9 +89,8 @@ echo '[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/
 
 ```
 brew install pyenv
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+echo 'export PYENV_ROOT=/usr/local/var/pyenv' >> ~/.zshrc
+echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' >> ~/.zshrc
 ```
 
 ## Shadowsocks
@@ -242,7 +241,7 @@ nvm alias default your_version
 
 [Atom](https://atom.io/) 被称作21世纪的编辑器，这个称号我认为当之无愧，强大到无所不能的插件机制让你每天都想蹂躏她，哈哈。
 
-Atom 在安装插件的时候需要访问 `Atom AP`、`Amazon S3`、`NPM` 这些服务，但是这些服务在中国要么不能要么速度很慢，可以自 `~/.Atom/.apmrc` 配置文件下添加一下[淘宝的 NPM 镜像](http://npm.taobao.org)：
+Atom 在安装插件的时候需要访问 `Atom AP`、`Amazon S3`、`NPM` 这些服务，但是这些服务在中国要么不能要么速度很慢，可以自 `~/.atom/.apmrc` 配置文件下添加一下[淘宝的 NPM 镜像](http://npm.taobao.org)：
 
 ```sh
 registry = https://registry.npm.taobao.org
@@ -307,9 +306,11 @@ sudo gem install cocoapods
 - gem源特别慢
 - 不同的工程可能用了不同版本的 CocoaPodsod ，又出现了版本切换的问题（真是日了狗）
 
-解决第一个问题，就是升级ruby，这里用 [rvm](https://rvm.io/)来升级，rvm 安装和更新脚本如下：
+解决第一个问题，就是升级ruby，这里用 [rvm](https://rvm.io/) 来升级，rvm 安装和更新脚本如下：
 
 ```
+brew install gnupg gnupg2
+
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 
 \curl -sSL https://get.rvm.io | bash -s stable
@@ -331,7 +332,10 @@ gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 gem sources -l
 ```
 
-解决第三个问题，这里给大家推荐 [podenv](https://github.com/kylef/podenv)，安装脚本如下：
+> 注意：这一步如果出现了错误，建议运行 `rvm reinstall 2.3.0`，重新安装下 ruby-2.3.0 的版本
+
+~~解决第三个问题，这里给大家推荐 [podenv](https://github.com/kylef/podenv)，安装脚本如下：~~
+
 
 ```
 brew install kylef/formulae/podenv
@@ -343,6 +347,33 @@ podenv install 1.0.1
 podenv install 1.0.0
 podenv global 1.0.1
 ```
+
+经过不断尝试后，发现用 `podenv` 来解决第三个问题会有坑，毕竟 `podenv` 还是比较小众，支持度也不好。经过查询后，找到了[直接用 `rvm` 来解决这个问题的方法](http://blog.csdn.net/focusjava/article/details/51325802)，这里我采用 `gemset` 的方式来管理不同的版本 `CocoaPods` 的 `gem`。
+
+1.0.0 安装脚本如下：
+```sh
+rvm gemset create pods-1.0.0
+rvm gemset use pods-1.0.0
+gem install cocoapods -v 1.0.0
+```
+
+1.0.1 安装脚本如下：
+
+```sh
+rvm gemset create pods-1.0.1
+rvm gemset use pods-1.0.1
+gem install cocoapods -v 1.0.1
+```
+
+0.39.0 安装脚本如下：
+
+```sh
+rvm gemset create pods-0.39.0
+rvm gemset use pods-0.39.0
+gem install cocoapods -v 0.39.0
+```
+
+> 注意，这里用到了 `gemset` 来隔离不同版本的 Cocoapods，另外 `rvm` 自带 `global` 和 `default` 的两个默认 `gemset`，如果没有选择 `gemset` 默认安装在 `default` 下，如果使用 `sudo gem` 权限来安装，则会直接安装到 `global` 下，大家可以根据自己的期望安装
 
 随着 1.0+ 版本的发布，可以根据自己的喜好来安装 [Cocoapods App](https://cocoapods.org/app).
 
