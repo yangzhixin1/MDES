@@ -323,6 +323,8 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
 
+> 注意：这样安装好的 `rvm` 大部分情况下是可以使用的，但是如果切换到 `bash` 命令行模式下有可能会出现 `shell_session_update:command not found` 的[问题](http://superuser.com/questions/1044130/why-am-i-having-how-can-i-fix-this-error-shell-session-update-command-not-f)，目前采用 `rvm get head` 更新下 `master` 分支下的 `rvm` 就没问题了，后续讲 `master` 正式更新到下载包里应该问题就会解决。
+
 也可以参考可以参考这个地址：https://segmentfault.com/a/1190000003784636
 
 更新ruby脚本如下：
