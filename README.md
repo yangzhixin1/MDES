@@ -554,6 +554,7 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 
 ## TODO
 - [x] make the MDES document
+- [ ] Directory list
 - [ ] use `Homebrew` and `Homebrew-Cask` install the MDES
 - [ ] collect from community
 - [ ] save IDE config online
