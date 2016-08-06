@@ -399,6 +399,7 @@ gem install cocoapods -v 0.39.0
 - [ ] [CocoaPods-介绍](todo)
 - [ ] [CocoaPods-使用指南](todo)
 - [ ] [CocoaPods-情况说明以及升级](todo)
+- [ ] [CocoaPods-提速](todo)
 - [ ] [CocoaPods-App使用](todo)
 - [ ] [CocoaPods-创建私有仓库和镜像](todo)
 - [ ] [CocoaPods-创建公共依赖库并发布](todo)
@@ -515,9 +516,15 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 
 ## Swift
 
-## react-native
+## ReactNative
 
 [DecoIDE]https://www.decosoftware.com/
+
+## Docker
+
+[Docker](https://www.docker.com) 是一个让人脑洞大开的应用程序虚拟化方案，对于从事服务器和云开发的开发者可以尝试下。
+
+[Docker docks](https://docs.docker.com/docker-for-mac/)  给出了详细的 OSX 安装方法，但是需要注意 Docker 官方给出了 `Stable` 和 `Beta` 两个安装渠道，大家可以详细阅读里面的内容进行有选择性的安装。
 
 ## Design
 1. Sketch
