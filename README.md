@@ -11,6 +11,7 @@ MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的�
 - [Xcode](#Xcode)
 - [Terminal](#Terminal)
 - [Homebrew](#Homebrew)
+- [Cocoapods](#Cocoapods)
 
 ## Lantern
 作为一个开发者，尤其是他妈的中国开发者（对不起这里爆粗口了），如果不能够访问谷歌等同于缺少了一个解决问题的利器，所以要做的第一步就是要搞科学上网，安装配置最简单的工具就是 [lantern](https://github.com/getlantern/lantern).
