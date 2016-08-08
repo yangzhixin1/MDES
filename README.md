@@ -9,6 +9,7 @@ MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的�
 - [Lantern](#lantern)
 - [GreenVPN](#greenVPN)
 - [Xcode](#xcode)
+  + [Xcode Plugin Manager](#xcode plugin manager)
 - [Terminal](#terminal)
 - [Homebrew](#homebrew)
 - [Cocoapods](#cocoapods)
