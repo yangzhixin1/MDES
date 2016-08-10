@@ -578,6 +578,8 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
   - [Sketch Measure](https://github.com/utom/sketch-measure)
   - [Unsplash It](https://github.com/fhuel/unsplash-it-sketch)
   - [WakaTime](https://github.com/wakatime/sketch-wakatime)
+  - [Sketch-SF-UI-Font-Fixer](https://github.com/kylehickinson/Sketch-SF-UI-Font-Fixer)
+  - [San Francisco Fonts](https://developer.apple.com/fonts/)
 
 2. PhotoShop
 3. Adobe DX
