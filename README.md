@@ -566,7 +566,19 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 [Docker docks](https://docs.docker.com/docker-for-mac/)  给出了详细的 OSX 安装方法，但是需要注意 Docker 官方给出了 `Stable` 和 `Beta` 两个安装渠道，大家可以详细阅读里面的内容进行有选择性的安装。
 
 ## Design
-1. Sketch
+1. [Sketch](https://www.sketchapp.com/) - 码农必备设计工具，支持各种插件，这里给出一些常用的。
+  - [ArtboardZoom](https://github.com/arkkimaagi/artboardzoom)
+  - [Craft](https://www.invisionapp.com/craft) - 不装后悔
+  - [Duplicator](https://github.com/turbobabr/duplicator)
+  - [DynamicButton3.5](https://github.com/fuggfuggfugg/sketch-dynamic-button-3.5)
+  - [Golden Line Height](https://github.com/lorenzwoehr/golden-ratio-line-height-sketch-plugin)
+  - [marketch](http://tudou527.github.io/marketch/)
+  - [personas](https://github.com/nolastan/sketch-personas)
+  - [Rename It](https://github.com/rodi01/renameit)
+  - [Sketch Measure](https://github.com/utom/sketch-measure)
+  - [Unsplash It](https://github.com/fhuel/unsplash-it-sketch)
+  - [WakaTime](https://github.com/wakatime/sketch-wakatime)
+
 2. PhotoShop
 3. Adobe DX
 
