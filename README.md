@@ -27,7 +27,9 @@ MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的�
 - [Cocoapods](#cocoapods)
   + [如何更好地使用 CocoaPods](如何更好地使用-cocoapods)
 - [Carthage](#carthage)
-- [Git SSH Key](#git-ssh-key)
+- [Git](#git)
+  + [Git SSH Key](#git-ssh-key)
+  + [Gitignore](#gitignore)
 - [BaiduPCS](#baidupcs)
 - [JAVA](#java)
 - [IDE](#ide)
@@ -459,7 +461,9 @@ brew install carthage
 - [ ] [Carthage-使用指南](todo)
 - [ ] [Carthage-创建公共依赖库并发布](todo)
 
-## Git SSH Key
+## Git
+
+### Git SSH Key
 
 ```
 ssh-keygen -t rsa -b 4096 -C "xxxx@xxx.com" -f ~/.ssh/id_rsa_github
@@ -489,6 +493,22 @@ Host git.coding.net
 User CoderAFI
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_coding.net
+```
+
+### Gitignore
+
+[gitignore.io](https://www.gitignore.io/) 是一个提供 gitignore 的第三方服务，同时提供了 `Command Line` 的形式来添加。
+
+安装脚本:
+```
+echo "function gi() { curl -L -s https://www.gitignore.io/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
+```
+
+添加 `Xcode` 的 `gitignore`：
+
+```
+cd your_prject_root_dir
+gi objective-c,swift,osx,appcode,xcode,carthage
 ```
 
 ## BaiduPCS
