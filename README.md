@@ -12,7 +12,8 @@ MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的�
   + [Xcode Plugin Manager](#xcode-plugin-manager)
 - [Terminal](#terminal)
 - [Homebrew](#homebrew)
-- [AutoJump](#autojump)
+  + [AutoJump](#autojump)
+  + [tree](#tree)
 - [Pyenv](#pyenv)
 - [Shadowsocks](#shadowsocks)
   + [GFWList](#gfwlist)
@@ -113,13 +114,21 @@ Homebrew 就不用多介绍了， OSX 上必备的程序包安装工具，安装
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## AutoJump
+### AutoJump
 
 [autojump](https://github.com/wting/autojump) -  a faster way to navigate your filesystem，安装脚本如下:
 
 ```
 brew install autojump
 echo '[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh' >> ~/.zshrc
+```
+
+### tree
+
+如果想让自己的文件夹结构能树形展示，可以用 `tree` 这个插件，安装脚本如下：
+```
+brew update
+brew install tree
 ```
 
 ## Pyenv
