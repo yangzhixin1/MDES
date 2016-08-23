@@ -551,7 +551,8 @@ git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
 ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
 ```
 
-只对特定域名进行代理：
+只对特定 `URL` 设置代理：
+
 修改 `~/.ssh/config` 配置文件，在需要设置代理的 `config` 项中，添加如下脚本配置：
 
 ```
