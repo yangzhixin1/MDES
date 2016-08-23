@@ -527,13 +527,14 @@ gi objective-c,swift,osx,appcode,xcode,carthage
 
 - HTTP(S) 协议
 
-+ 全局代理：
+全局代理：
 
 ```
 git config --global http.proxy socks5://127.0.0.1:1080
 git config --global http.proxy socks5://127.0.0.1:1080
 ```
-+ 只对特定 URL 设置代理：
+
+只对特定 `URL` 设置代理：
 
 ```
 git config --global http.<要设置代理的URL>.proxy socks5://127.0.0.1:1080
@@ -542,14 +543,15 @@ git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
 
 - SSH 协议
 
-+ 全局代理
+全局代理：
+
 修改 `/etc/ssh/ssh_config` 配置文件，添加如下脚本：
 
 ```
 ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
 ```
 
-+ 只对特定域名进行代理
+只对特定域名进行代理：
 修改 `~/.ssh/config` 配置文件，在需要设置代理的 `config` 项中，添加如下脚本配置：
 
 ```
