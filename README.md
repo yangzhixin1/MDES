@@ -441,6 +441,12 @@ rvm gemset use pods-0.39.0
 gem install cocoapods -v 0.39.0
 ```
 
+如果想指定一个 `default` 的 `gemset`，可用如下命令：
+
+```
+rvm use ruby-version@gemset-name --default
+```
+
 > 注意，这里用到了 `gemset` 来隔离不同版本的 Cocoapods，另外 `rvm` 自带 `global` 和 `default` 的两个默认 `gemset`，如果没有选择 `gemset` 默认安装在 `default` 下，如果使用 `sudo gem` 权限来安装，则会直接安装到 `global` 下，大家可以根据自己的期望安装
 
 随着 1.0+ 版本的发布，可以根据自己的喜好来安装 [Cocoapods App](https://cocoapods.org/app).
@@ -679,6 +685,7 @@ XamarinStudio 从 6.1 开始开源了 Xamrin.forms 的源代码，可以说是�
 12. DropBox - 可以在设置 Shadowsocks 代理进行访问
 13. Charles
 14. Gliffy
+15. [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 快捷键快速查找工具
 
 ## TODO
 - [x] make the MDES document
