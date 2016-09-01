@@ -34,6 +34,7 @@ MDES 就是为了解决上述问题而诞生，下面记录了 mac 上常用的�
   + [GitProxy](#gitproxy)
 - [BaiduPCS](#baidupcs)
 - [JAVA](#java)
+- [Android SDK](#android-sdk)
 - [IDE](#ide)
 - [Genymotion](#genymotion)
 - [VersionControl](#versioncontrol)
