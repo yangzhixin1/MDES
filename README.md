@@ -584,6 +584,11 @@ make install #将安装到/usr/local/bin下
 
 安装好了JDK方面安装 Android 的开发环境以及安装 InteliJ 系列的IDE.
 
+## Android SDK
+
+- [Android开发环境配置](http://www.cnblogs.com/kangjianwei101/p/5621238.html)
+- [Android SDK Manager和AVD Manager使用](http://www.cnblogs.com/kangjianwei101/p/5621238.html)
+
 ## IDE
 
 上面安装了两个IDE： `Xcode` 和 `Atom`，下面的列出一个比较常用的列表：
