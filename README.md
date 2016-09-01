@@ -586,6 +586,8 @@ make install #将安装到/usr/local/bin下
 
 ## Android SDK
 
+对于刚刚接触 `Android` 的同学来说，看到 `Android SDK Manager` 有这么多东西，到底该下载哪些才好呢？这是个问题，我这里给出两篇写的比较好的文章，供参考
+
 - [Android开发环境配置](http://www.cnblogs.com/kangjianwei101/p/5621238.html)
 - [Android SDK Manager和AVD Manager使用](http://www.cnblogs.com/kangjianwei101/p/5621238.html)
 
